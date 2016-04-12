@@ -1,4 +1,5 @@
 import java.util.Hashtable;
+
 public class PeopleDatabase {
 	//create a hashmap called people database
 	static Hashtable peopleDatabase = new Hashtable();

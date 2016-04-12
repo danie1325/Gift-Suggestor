@@ -15,8 +15,10 @@ public class EventsCalendar {
 	static String people = "";
 	
 	public static void addEventDate(String date){
+		//call new event
 		Event event = Event.createEvent(type, info, people);
 		calendar.put(date, event);
+		
 	}
 	
 	
