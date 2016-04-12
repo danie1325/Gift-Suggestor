@@ -20,8 +20,8 @@ public class Event {
 	/**public static Event createEvent() {
 		// TODO Auto-generated method stub
 		return null;
-		**/
-	}
+		
+	}**/
 
 	
 }
