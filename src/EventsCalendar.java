@@ -13,10 +13,11 @@ public class EventsCalendar {
 	static String type;
 	static String info;
 	static String people = "";
+	static String price;
 	
 	public static void addEventDate(String date){
 		//call new event
-		Event event = Event.createEvent(type, info, people);
+		Event event = Event.createEvent(type, info, people, price);
 		calendar.put(date, event);
 		
 	}
