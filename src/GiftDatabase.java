@@ -10,8 +10,8 @@ public class GiftDatabase {
 
 	/*store array lists of random gift ideas for different demographics in alternating thirds: 
 	 	*first index = gift name
-	 	*2nd = link to gift example
-	 	*3rd = price range
+	 	**2nd = price range
+	 	*3rd = link to gift example
 	 	*4th = beginning of next gift cycle
 	 */
 	
@@ -19,65 +19,65 @@ public class GiftDatabase {
 		
 		//gifts for girls ages 0-4
 		ArrayList<String> babyGirlGifts = new ArrayList<String>();
+		babyGirlGifts.add("Onesie");
+		babyGirlGifts.add("10-30");
+		babyGirlGifts.add("https://goo.gl/nNVAJP");
+		babyGirlGifts.add("Onesie");
+		babyGirlGifts.add("10-30");
+		babyGirlGifts.add("https://goo.gl/7OsDXi");
+		babyGirlGifts.add("Bath Toys");
+		babyGirlGifts.add("5-10");
+		babyGirlGifts.add("http://goo.gl/GyvoFY");
+		babyGirlGifts.add("Blanket");
+		babyGirlGifts.add("5-20");
+		babyGirlGifts.add("http://goo.gl/hTtzBr");
+		babyGirlGifts.add("Swaddle");
+		babyGirlGifts.add("10-40");
+		babyGirlGifts.add("http://goo.gl/HE8lsz");
+		babyGirlGifts.add("Shirt");
 		babyGirlGifts.add("");
 		babyGirlGifts.add("");
+		babyGirlGifts.add("Play Matt");
+		babyGirlGifts.add("40-70");
+		babyGirlGifts.add("http://goo.gl/9P4LdJ");
+		babyGirlGifts.add("Pants");
 		babyGirlGifts.add("");
 		babyGirlGifts.add("");
+		babyGirlGifts.add("Stuffed Animal");
 		babyGirlGifts.add("");
 		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
-		babyGirlGifts.add("");
+		babyGirlGifts.add("Dress");
 		babyGirlGifts.add("");
 		babyGirlGifts.add("");
 		
 
 		//gifts for boys ages 0-4
 		ArrayList<String> babyBoyGifts = new ArrayList<String>();
+		babyBoyGifts.add("Onesie");
+		babyBoyGifts.add("10-30");
+		babyBoyGifts.add("https://goo.gl/Qmno6k");
+		babyBoyGifts.add("Onesie");
+		babyBoyGifts.add("10-30");
+		babyBoyGifts.add("https://goo.gl/nNVAJP");
+		babyBoyGifts.add("Bath Toys");
+		babyBoyGifts.add("5-10");
+		babyBoyGifts.add("http://goo.gl/GyvoFY");
+		babyBoyGifts.add("Blanket");
+		babyBoyGifts.add("10-20");
+		babyBoyGifts.add("http://goo.gl/5Sbj2Q");
+		babyBoyGifts.add("Swaddle");
+		babyBoyGifts.add("10-40");
+		babyBoyGifts.add("http://goo.gl/HYMQ8R");
+		babyBoyGifts.add("Play Matt");
+		babyBoyGifts.add("40-70");
+		babyBoyGifts.add("http://goo.gl/9P4LdJ");
+		babyBoyGifts.add("Pants");
 		babyBoyGifts.add("");
 		babyBoyGifts.add("");
+		babyBoyGifts.add("Shirt");
 		babyBoyGifts.add("");
 		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
-		babyBoyGifts.add("");
+		babyBoyGifts.add("Stuffed Animal");
 		babyBoyGifts.add("");
 		babyBoyGifts.add("");
 		babyBoyGifts.add("");
