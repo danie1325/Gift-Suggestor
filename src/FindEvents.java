@@ -23,23 +23,20 @@ public class FindEvents {
 	public String getCurrentYear(){
 		String date = getCurrentDate();
 		String Str = new String(date);
-		return Str.substring(0,3);
+		return Str.substring(0, 4);
 		
 	}
 
 	public String getCurrentMonth(){
 		String date = getCurrentDate();
 		String Str = new String(date);
-		return Str.substring(5,6);
+		return Str.substring(5,7);
 	}
 
 	public String getCurrentDay(){
 		String date = getCurrentDate();
 		String Str = new String(date);
-		return Str.substring(8,9);
+		return Str.substring(8, 10);
 	}
-
-
-
 
 }

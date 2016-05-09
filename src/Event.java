@@ -17,12 +17,5 @@ public class Event {
 		return event;
 		
 	}
-
-	/**public static Event createEvent() {
-		// TODO Auto-generated method stub
-		return null;
-		
-	}**/
-
 	
 }
