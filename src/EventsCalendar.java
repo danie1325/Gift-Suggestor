@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Hashtable;
 public class EventsCalendar {
 	//create a hashmap called people database
-	static Hashtable calendar = new Hashtable();
+	static Hashtable<String, Event> calendar = new Hashtable<String, Event>();
 
 	public String getDate(){
 		return "";

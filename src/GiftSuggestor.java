@@ -1,29 +1,36 @@
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
-public class GiftSuggestor {	
+public class GiftSuggestor {
 	// needs to write people & events 
 	public static void main(String args[])throws IOException{
-/**
-	      File file = new File("/Users/Amy/Documents/People.txt");
-	      // creates the file
-	      file.createNewFile();
-	      // creates a FileWriter Object
-	      FileWriter writer = new FileWriter(file); 
-	      // Writes the content to the file
-	      writer.write(""); 
-	      writer.flush();
-	      writer.close();
-
-	     //Creates a FileReader Object
-	      FileReader fr = new FileReader(file); 
-	      char [] a = new char[50];
-	      fr.read(a); // reads the content to the array
-	      for(char c : a)
-	          System.out.print(c); //prints the characters one by one
-	      fr.close();
-	      **/
+		//test code
+		PeopleDatabase People = new  PeopleDatabase();
+		People.createPerson("Bob");
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Do you wish to add an event? Answer yes or no");
+		String response = input.nextLine();
+		if (response.toLowerCase().equals("yes")) {
+			System.out.println("Enter Event Name:");
+			String eventName = input.nextLine();
+			
+			System.out.println("Enter Event Type:");
+			String eventType = input.nextLine();
+			
+			System.out.println("Enter Event Information:");
+			String eventInfo = input.nextLine();
+			
+			System.out.println("Enter Person Involved:");
+			String personName = input.nextLine();
+			People.createPerson(personName);
+			
+			System.out.println("How much money are you willing to spend on this event?");
+			String eventPrice = input.nextLine();
+			
+			Event event = new Event(eventType, eventInfo, personName, eventPrice);
+			
+		}
 	   }
-}
+	}
+
