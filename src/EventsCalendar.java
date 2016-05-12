@@ -17,9 +17,9 @@ public class EventsCalendar {
 	static String people = "";
 	static String price;
 
-	public static void addEventToCalendar(String date) throws IOException{
+	public static void addEventToCalendar(String date, Event event) throws IOException{
 		//call new event
-		calendar.put(date, eventName);
+		calendar.put(date, event); // change event name to an ArrayList of event type objects that will store all event sat that date
 		
 		//directory needs to be changed 
 		File file = new File("/Users/Amy/Documents/Events.txt");
