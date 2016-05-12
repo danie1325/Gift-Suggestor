@@ -21,7 +21,7 @@ public class PeopleDatabase {
 		FileWriter writer = new FileWriter(file); 
 		
 		// Writes the content to the file
-		writer.write(name + peopleDatabase.get(name)); 
+		writer.write(name + " " + peopleDatabase.get(name).toString()); 
 		writer.flush();
 		writer.close();
 
