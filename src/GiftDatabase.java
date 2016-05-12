@@ -472,9 +472,9 @@ public class GiftDatabase {
 		nerdGifts.add("Gadget Fighting Toy");
 		nerdGifts.add("100-200");
 		nerdGifts.add("http://goo.gl/mmKBGb");
-		nerdGifts.add("");
-		nerdGifts.add("");
-		nerdGifts.add("");
+		nerdGifts.add("Batman Electrical Outlet Sticker");
+		nerdGifts.add("2-5");
+		nerdGifts.add("http://goo.gl/E13E7E");
 		nerdGifts.add("");
 		nerdGifts.add("");
 		nerdGifts.add("");
