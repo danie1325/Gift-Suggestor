@@ -4,31 +4,33 @@ import java.util.Scanner;
 public class GiftSuggestor {
 	// needs to write people & events 
 	public static void main(String args[])throws IOException{
-		//test code
-		PeopleDatabase People = new  PeopleDatabase();
-		People.createPerson("Bob");
 		
 		Scanner input = new Scanner(System.in);
-		System.out.println("Do you wish to add an event? Answer yes or no");
+		System.out.println("Would you like to add a new event (enter 0) or search for an existing event (enter 1)?");
 		String response = input.nextLine();
-		if (response.toLowerCase().equals("yes")) {
+		if (response.toLowerCase().equals("0")) {
 			System.out.println("Enter Event Name:");
 			String eventName = input.nextLine();
 			
-			System.out.println("Enter Event Type:");
-			String eventType = input.nextLine();
-			
-			System.out.println("Enter Event Information:");
+			System.out.println("Enter information about the event:");
 			String eventInfo = input.nextLine();
 			
-			System.out.println("Enter Person Involved:");
+			System.out.println("Enter the name of the person involved, or who the event is being thrown for:");
 			String personName = input.nextLine();
-			People.createPerson(personName);
+			Person.addPerson(personName);
+			
+			System.out.println("Enter location the event is ocurring at:");
+			String eventLocation = input.nextLine();
+			
 			
 			System.out.println("How much money are you willing to spend on this event?");
 			String eventPrice = input.nextLine();
 			
-			Event event = new Event(eventType, eventInfo, personName, eventPrice);
+			Event event = new Event(eventName, eventInfo, personName, eventPrice, eventLocation);
+			
+		}
+		if (response.toLowerCase().equals("1")) {
+		
 			
 		}
 	   }

@@ -17,10 +17,9 @@ public class EventsCalendar {
 	static String people = "";
 	static String price;
 
-	public static void addEventDate(String date) throws IOException{
+	public static void addEventToCalendar(String date) throws IOException{
 		//call new event
-		Event event = Event.createEvent(type, info, people, price);
-		calendar.put(date, event);
+		calendar.put(date, eventName);
 		
 		//directory needs to be changed 
 		File file = new File("/Users/Amy/Documents/Events.txt");
