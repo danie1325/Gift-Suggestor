@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Hashtable;
 public class EventsCalendar {
-	//create a hashmap called people database
+	//create a hashmap that is called people database
 	static Hashtable<String, Event> calendar = new Hashtable<String, Event>();
 
 	public String getDate(){
