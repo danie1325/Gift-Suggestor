@@ -56,7 +56,7 @@ public class GiftSuggestor {
 			
 			
 			
-			Event event = new createEvent(eventName, eventDate, eventInfo, personName, giftPrice, eventLocation, reminderEmail, reminderDate);
+			Event event = Event.createEvent(eventName, eventDate, eventInfo, personName, giftPrice, eventLocation, reminderEmail, reminderDate);
 			
 		}
 		if (response.toLowerCase().equals("1")) {
