@@ -12,10 +12,7 @@ public class EventsCalendar {
 	}
 
 	String date = getDate();
-	static String type;
-	static String info;
-	static String people = "";
-	static String price;
+
 
 	public static void addEventToCalendar(String date, Event event) throws IOException{
 		//call new event

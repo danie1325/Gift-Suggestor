@@ -10,7 +10,7 @@ public class GiftDatabase {
 
 	/*store array lists of random gift ideas for different demographics in alternating thirds: 
 	 	*first index = gift name
-	 	**2nd = price range
+	 	*2nd = price range
 	 	*3rd = link to gift example
 	 	*4th = beginning of next gift cycle
 	 */
