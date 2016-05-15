@@ -9,8 +9,7 @@ public class PeopleDatabase {
 	public static Hashtable<String, Person> peopleDatabase = new Hashtable<String, Person>();
 
 	//constructor for one person
-	public static void createPerson(String name) throws IOException{
-		Person person = Person.addPerson(name);
+	public static void addPersonToDatabase(String name, Person person) throws IOException{
 		peopleDatabase.put(name, person); 
 		
 		//directory needs to be changed 

@@ -573,9 +573,6 @@ public class GiftDatabase {
 		artistGifts.add("200-250");
 		artistGifts.add("http://goo.gl/pYWCt7");
 
-		
-
-		
 
 		//gifts for people that love movies, plays, museums, and music
 		ArrayList<String> entertainementBuffGifts = new ArrayList<String>();
