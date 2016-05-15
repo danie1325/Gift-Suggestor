@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
@@ -9,16 +12,23 @@ public class GiftDatabase {
 	static Hashtable recommendedGifts = new Hashtable();
 
 	/*store array lists of random gift ideas for different demographics in alternating thirds: 
-	 	*first index = gift name
-	 	**2nd = price range
-	 	*3rd = link to gift example
-	 	*4th = beginning of next gift cycle
+	 *first index = gift name
+	 **2nd = price range
+	 *3rd = link to gift example
+	 *4th = beginning of next gift cycle
 	 */
-	
-	public void createGiftDatabase(){
-		
+
+	public void createGiftDatabase() throws IOException{
+		//directory needs to be changed 
+		File file = new File("/Users/Amy/Documents/Events.txt");
+		// creates the file
+		file.createNewFile();
+		// creates a FileWriter Object
+		FileWriter writer = new FileWriter(file); 
+
 		//gifts for girls ages 0-4
 		ArrayList<String> babyGirlGifts = new ArrayList<String>();
+		writer.write("Gifts for Baby Girls(Ages 0 -4): ");
 		babyGirlGifts.add("Onesie");
 		babyGirlGifts.add("10-30");
 		babyGirlGifts.add("http://goo.gl/lCFUex");
@@ -49,10 +59,17 @@ public class GiftDatabase {
 		babyGirlGifts.add("Dress");
 		babyGirlGifts.add("10-30");
 		babyGirlGifts.add("http://goo.gl/YFdSnt");
-		
+
+		// Writes the content to the file
+		for(String s: babyGirlGifts) {
+			writer.write(s); 
+		}
+
 
 		//gifts for boys ages 0-4
 		ArrayList<String> babyBoyGifts = new ArrayList<String>();
+		writer.write("Gifts for Baby Boys(Ages 0 -4): ");
+		writer.write("babyBoyGifts:");
 		babyBoyGifts.add("Onesie");
 		babyBoyGifts.add("10-30");
 		babyBoyGifts.add("https://goo.gl/Qmno6k");
@@ -83,10 +100,15 @@ public class GiftDatabase {
 		babyBoyGifts.add("Learning Toy");
 		babyBoyGifts.add("15-30");
 		babyBoyGifts.add("http://goo.gl/d54NTj");
-		
+
+		// Writes the content to the file
+		for(String s: babyBoyGifts) {
+			writer.write(s); 
+		}
 
 		//gifts for girls ages 5-8
 		ArrayList<String> girlGifts = new ArrayList<String>();
+		writer.write("Gifts for Girls(Ages 5 - 8): ");
 		girlGifts.add("Book");
 		girlGifts.add("5-20");
 		girlGifts.add("http://goo.gl/IHqGq7");
@@ -118,8 +140,14 @@ public class GiftDatabase {
 		girlGifts.add("10-25");
 		girlGifts.add("http://goo.gl/eiuzuW");
 
+		// Writes the content to the file
+		for(String s: girlGifts) {
+			writer.write(s); 
+		}
+
 		//gifts for boys ages 5-8
 		ArrayList<String> boyGifts = new ArrayList<String>();
+		writer.write("Gifts for Boys(Ages 5 - 8): ");
 		boyGifts.add("Shoes");
 		boyGifts.add("25-50");
 		boyGifts.add("http://goo.gl/KRxlvS");
@@ -151,8 +179,14 @@ public class GiftDatabase {
 		boyGifts.add("10-20");
 		boyGifts.add("http://goo.gl/IBF9vT");
 
+		// Writes the content to the file
+		for(String s: boyGifts) {
+			writer.write(s); 
+		}
+
 		//gifts for boys ages 9-12
 		ArrayList<String> preteenBoyGifts = new ArrayList<String>();
+		writer.write("Gifts for Preteen Boys(Ages 9 - 12): ");
 		preteenBoyGifts.add("Sports Related Gifts");
 		preteenBoyGifts.add("20-40");
 		preteenBoyGifts.add("http://goo.gl/E28ayi");
@@ -180,10 +214,15 @@ public class GiftDatabase {
 		preteenBoyGifts.add("Body Care Products (ex: cologne)");
 		preteenBoyGifts.add("10-20");
 		preteenBoyGifts.add("http://goo.gl/OWrmJ1");
-		
+
+		// Writes the content to the file
+		for(String s: preteenBoyGifts) {
+			writer.write(s); 
+		}
 
 		//gifts for girls ages 9-12
 		ArrayList<String> preteenGirlGifts = new ArrayList<String>();
+		writer.write("Gifts for Preteen Girls(Ages 9 - 12): ");
 		preteenGirlGifts.add("Sports Gift");
 		preteenGirlGifts.add("10-30");
 		preteenGirlGifts.add("http://goo.gl/K9GgmB");
@@ -214,10 +253,15 @@ public class GiftDatabase {
 		preteenGirlGifts.add("Makeup/Nail Polish");
 		preteenGirlGifts.add("10-20");
 		preteenGirlGifts.add("http://goo.gl/pYwJpn");
-		
+
+		// Writes the content to the file
+		for(String s: preteenGirlGifts) {
+			writer.write(s); 
+		}
 
 		//gifts for girls ages 13-19
 		ArrayList<String> teenGirlGifts = new ArrayList<String>();
+		writer.write("Gifts for Teen Girls(Ages 13 - 19): ");
 		teenGirlGifts.add("Giftcard");
 		teenGirlGifts.add("you choose");
 		teenGirlGifts.add("http://goo.gl/1rE677");
@@ -249,8 +293,14 @@ public class GiftDatabase {
 		teenGirlGifts.add("5-30");
 		teenGirlGifts.add("http://goo.gl/WXc8vF");
 
+		// Writes the content to the file
+		for(String s: teenGirlGifts) {
+			writer.write(s); 
+		}
+
 		//gifts for boys ages 13-19
 		ArrayList<String> teenBoyGifts = new ArrayList<String>();
+		writer.write("Gifts for Teen Boys(Ages 13 - 19): ");
 		teenBoyGifts.add("Giftcard");
 		teenBoyGifts.add("you choose");
 		teenBoyGifts.add("http://goo.gl/1rE677");
@@ -282,8 +332,14 @@ public class GiftDatabase {
 		teenBoyGifts.add("100-300");
 		teenBoyGifts.add("http://goo.gl/BzbRTu");
 
+		// Writes the content to the file
+		for(String s: teenBoyGifts) {
+			writer.write(s); 
+		}
+
 		//gifts for girls ages 20-35
 		ArrayList<String> youngFemaleAdultGifts = new ArrayList<String>();
+		writer.write("Gifts for Female Young Adults(Ages 20 - 35): ");
 		youngFemaleAdultGifts.add("Shirt");
 		youngFemaleAdultGifts.add("10-30");
 		youngFemaleAdultGifts.add("https://goo.gl/CAKvSM");
@@ -336,10 +392,14 @@ public class GiftDatabase {
 		youngFemaleAdultGifts.add("100-200");
 		youngFemaleAdultGifts.add("http://goo.gl/IoobNt");
 
-	
-		
+		// Writes the content to the file
+		for(String s: youngFemaleAdultGifts) {
+			writer.write(s); 
+		}
+
 		//gifts for boys ages 20-35
 		ArrayList<String> youngMaleAdultGifts = new ArrayList<String>();
+		writer.write("Gifts for Male Young Adults(Ages 20 - 35): ");
 		youngMaleAdultGifts.add("Concert Tickets");
 		youngMaleAdultGifts.add("30-200");
 		youngMaleAdultGifts.add("http://goo.gl/Ojipcq");
@@ -379,10 +439,15 @@ public class GiftDatabase {
 		youngMaleAdultGifts.add("Tie");
 		youngMaleAdultGifts.add("50-100");
 		youngMaleAdultGifts.add("http://goo.gl/0i1Sk6");
-		
+
+		// Writes the content to the file
+		for(String s: youngMaleAdultGifts) {
+			writer.write(s); 
+		}
 
 		//gifts for girls ages 36+
 		ArrayList<String> femaleAdultGifts = new ArrayList<String>();
+		writer.write("Gifts for Female Adults(Ages 36+): ");
 		femaleAdultGifts.add("Alcohol");
 		femaleAdultGifts.add("20-50");
 		femaleAdultGifts.add("http://goo.gl/VzVAyA");
@@ -420,8 +485,14 @@ public class GiftDatabase {
 		femaleAdultGifts.add("150-300");
 		femaleAdultGifts.add("http://goo.gl/86f0hG");
 
+		// Writes the content to the file
+		for(String s: femaleAdultGifts) {
+			writer.write(s); 
+		}
+
 		//gifts for boys ages 36+
 		ArrayList<String> maleAdultGifts = new ArrayList<String>();
+		writer.write("Gifts for Male Adults(Ages 36+): ");
 		maleAdultGifts.add("Alcohol");
 		maleAdultGifts.add("20-50");
 		maleAdultGifts.add("http://goo.gl/VzVAyA");
@@ -465,10 +536,14 @@ public class GiftDatabase {
 		maleAdultGifts.add("50-100");
 		maleAdultGifts.add("http://goo.gl/gzhQEn");
 
-		
+		// Writes the content to the file
+		for(String s: maleAdultGifts) {
+			writer.write(s); 
+		}
 
 		//gifts for nerds!
 		ArrayList<String> geekGifts = new ArrayList<String>();
+		writer.write("Gifts for Nerds: ");
 		geekGifts.add("Gadget Fighting Toy");
 		geekGifts.add("100-200");
 		geekGifts.add("http://goo.gl/mmKBGb");
@@ -505,8 +580,14 @@ public class GiftDatabase {
 		geekGifts.add("Star Wars R2-D@ Cupcake Molds");
 		geekGifts.add("10-20");
 		geekGifts.add("http://goo.gl/mb3p5T");
-		
+
+		// Writes the content to the file
+		for(String s: geekGifts) {
+			writer.write(s); 
+		}
+
 		//gifts for athletes
+		writer.write("Gifts for Athletes: ");
 		ArrayList<String> athleteGifts = new ArrayList<String>();
 		athleteGifts.add("See Through Bottom Canoe");
 		athleteGifts.add("2000-2500");
@@ -538,10 +619,15 @@ public class GiftDatabase {
 		athleteGifts.add("Workout Clothes");
 		athleteGifts.add("20-60");
 		athleteGifts.add("http://goo.gl/hN85Do");
-		
+
+		// Writes the content to the file
+		for(String s: athleteGifts) {
+			writer.write(s); 
+		}
 
 		//gifts for artists
 		ArrayList<String> artistGifts = new ArrayList<String>();
+		writer.write("Gifts for Artists: ");
 		artistGifts.add("142-Piece Wood Art Set");
 		artistGifts.add("20-30");
 		artistGifts.add("http://goo.gl/UWZC5Q");
@@ -573,12 +659,14 @@ public class GiftDatabase {
 		artistGifts.add("200-250");
 		artistGifts.add("http://goo.gl/pYWCt7");
 
-		
-
-		
+		// Writes the content to the file
+		for(String s: artistGifts) {
+			writer.write(s); 
+		}
 
 		//gifts for people that love movies, plays, museums, and music
 		ArrayList<String> entertainementBuffGifts = new ArrayList<String>();
+		writer.write("Gifts for Entertainment Buffs: ");
 		entertainementBuffGifts.add("Dexter: The Complete Series Collection");
 		entertainementBuffGifts.add("150-200");
 		entertainementBuffGifts.add("http://goo.gl/ETWuPu");
@@ -610,7 +698,13 @@ public class GiftDatabase {
 		entertainementBuffGifts.add("10,000-50,000");
 		entertainementBuffGifts.add("http://goo.gl/5cru5q");
 
+		// Writes the content to the file
+		for(String s: entertainementBuffGifts) {
+			writer.write(s); 
+		}
+
+		writer.flush();
+		writer.close();
 	}
 }
 
-	
