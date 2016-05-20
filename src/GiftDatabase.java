@@ -2,23 +2,15 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class GiftDatabase {
-	/*create a hashmap called gift database that stores gifts recommended for each person
-	 * key = person name
-	 * value = list of gift ideas
-	 */
-	static Hashtable recommendedGifts = new Hashtable();
-
 	/*store array lists of random gift ideas for different demographics in alternating thirds: 
 	 	*first index = gift name
 	 	*2nd = price range
 	 	*3rd = link to gift example
 	 	*4th = beginning of next gift cycle
 	 */
-	
-	public void createGiftDatabase(){
-		
+
 		//gifts for girls ages 0-4
-		ArrayList<String> babyGirlGifts = new ArrayList<String>();
+		static ArrayList<String> babyGirlGifts = new ArrayList<String>();
 		babyGirlGifts.add("Onesie");
 		babyGirlGifts.add("10-30");
 		babyGirlGifts.add("http://goo.gl/lCFUex");
@@ -52,7 +44,7 @@ public class GiftDatabase {
 		
 
 		//gifts for boys ages 0-4
-		ArrayList<String> babyBoyGifts = new ArrayList<String>();
+		static ArrayList<String> babyBoyGifts = new ArrayList<String>();
 		babyBoyGifts.add("Onesie");
 		babyBoyGifts.add("10-30");
 		babyBoyGifts.add("https://goo.gl/Qmno6k");
@@ -86,7 +78,7 @@ public class GiftDatabase {
 		
 
 		//gifts for girls ages 5-8
-		ArrayList<String> girlGifts = new ArrayList<String>();
+		static ArrayList<String> girlGifts = new ArrayList<String>();
 		girlGifts.add("Book");
 		girlGifts.add("5-20");
 		girlGifts.add("http://goo.gl/IHqGq7");
@@ -119,7 +111,7 @@ public class GiftDatabase {
 		girlGifts.add("http://goo.gl/eiuzuW");
 
 		//gifts for boys ages 5-8
-		ArrayList<String> boyGifts = new ArrayList<String>();
+		static ArrayList<String> boyGifts = new ArrayList<String>();
 		boyGifts.add("Shoes");
 		boyGifts.add("25-50");
 		boyGifts.add("http://goo.gl/KRxlvS");
@@ -152,7 +144,7 @@ public class GiftDatabase {
 		boyGifts.add("http://goo.gl/IBF9vT");
 
 		//gifts for boys ages 9-12
-		ArrayList<String> preteenBoyGifts = new ArrayList<String>();
+		static ArrayList<String> preteenBoyGifts = new ArrayList<String>();
 		preteenBoyGifts.add("Sports Related Gifts");
 		preteenBoyGifts.add("20-40");
 		preteenBoyGifts.add("http://goo.gl/E28ayi");
@@ -183,7 +175,7 @@ public class GiftDatabase {
 		
 
 		//gifts for girls ages 9-12
-		ArrayList<String> preteenGirlGifts = new ArrayList<String>();
+		static ArrayList<String> preteenGirlGifts = new ArrayList<String>();
 		preteenGirlGifts.add("Sports Gift");
 		preteenGirlGifts.add("10-30");
 		preteenGirlGifts.add("http://goo.gl/K9GgmB");
@@ -217,7 +209,7 @@ public class GiftDatabase {
 		
 
 		//gifts for girls ages 13-19
-		ArrayList<String> teenGirlGifts = new ArrayList<String>();
+		static ArrayList<String> teenGirlGifts = new ArrayList<String>();
 		teenGirlGifts.add("Giftcard");
 		teenGirlGifts.add("you choose");
 		teenGirlGifts.add("http://goo.gl/1rE677");
@@ -250,7 +242,7 @@ public class GiftDatabase {
 		teenGirlGifts.add("http://goo.gl/WXc8vF");
 
 		//gifts for boys ages 13-19
-		ArrayList<String> teenBoyGifts = new ArrayList<String>();
+		static ArrayList<String> teenBoyGifts = new ArrayList<String>();
 		teenBoyGifts.add("Giftcard");
 		teenBoyGifts.add("you choose");
 		teenBoyGifts.add("http://goo.gl/1rE677");
@@ -283,7 +275,7 @@ public class GiftDatabase {
 		teenBoyGifts.add("http://goo.gl/BzbRTu");
 
 		//gifts for girls ages 20-35
-		ArrayList<String> youngFemaleAdultGifts = new ArrayList<String>();
+		static ArrayList<String> youngFemaleAdultGifts = new ArrayList<String>();
 		youngFemaleAdultGifts.add("Shirt");
 		youngFemaleAdultGifts.add("10-30");
 		youngFemaleAdultGifts.add("https://goo.gl/CAKvSM");
@@ -339,7 +331,7 @@ public class GiftDatabase {
 	
 		
 		//gifts for boys ages 20-35
-		ArrayList<String> youngMaleAdultGifts = new ArrayList<String>();
+		static ArrayList<String> youngMaleAdultGifts = new ArrayList<String>();
 		youngMaleAdultGifts.add("Concert Tickets");
 		youngMaleAdultGifts.add("30-200");
 		youngMaleAdultGifts.add("http://goo.gl/Ojipcq");
@@ -382,7 +374,7 @@ public class GiftDatabase {
 		
 
 		//gifts for girls ages 36+
-		ArrayList<String> femaleAdultGifts = new ArrayList<String>();
+		static ArrayList<String> femaleAdultGifts = new ArrayList<String>();
 		femaleAdultGifts.add("Alcohol");
 		femaleAdultGifts.add("20-50");
 		femaleAdultGifts.add("http://goo.gl/VzVAyA");
@@ -421,7 +413,7 @@ public class GiftDatabase {
 		femaleAdultGifts.add("http://goo.gl/86f0hG");
 
 		//gifts for boys ages 36+
-		ArrayList<String> maleAdultGifts = new ArrayList<String>();
+		static ArrayList<String> maleAdultGifts = new ArrayList<String>();
 		maleAdultGifts.add("Alcohol");
 		maleAdultGifts.add("20-50");
 		maleAdultGifts.add("http://goo.gl/VzVAyA");
@@ -468,7 +460,7 @@ public class GiftDatabase {
 		
 
 		//gifts for nerds!
-		ArrayList<String> geekGifts = new ArrayList<String>();
+		static ArrayList<String> geekGifts = new ArrayList<String>();
 		geekGifts.add("Gadget Fighting Toy");
 		geekGifts.add("100-200");
 		geekGifts.add("http://goo.gl/mmKBGb");
@@ -502,12 +494,12 @@ public class GiftDatabase {
 		geekGifts.add("Geeky Hoodie");
 		geekGifts.add("65-80");
 		geekGifts.add("http://goo.gl/MbI9pT");
-		geekGifts.add("Star Wars R2-D@ Cupcake Molds");
+		geekGifts.add("Star Wars R2-D2 Cupcake Molds");
 		geekGifts.add("10-20");
 		geekGifts.add("http://goo.gl/mb3p5T");
 		
 		//gifts for athletes
-		ArrayList<String> athleteGifts = new ArrayList<String>();
+		static ArrayList<String> athleteGifts = new ArrayList<String>();
 		athleteGifts.add("See Through Bottom Canoe");
 		athleteGifts.add("2000-2500");
 		athleteGifts.add("http://goo.gl/3PsVT3");
@@ -541,7 +533,7 @@ public class GiftDatabase {
 		
 
 		//gifts for artists
-		ArrayList<String> artistGifts = new ArrayList<String>();
+		static ArrayList<String> artistGifts = new ArrayList<String>();
 		artistGifts.add("142-Piece Wood Art Set");
 		artistGifts.add("20-30");
 		artistGifts.add("http://goo.gl/UWZC5Q");
@@ -575,7 +567,7 @@ public class GiftDatabase {
 
 
 		//gifts for people that love movies, plays, museums, and music
-		ArrayList<String> entertainementBuffGifts = new ArrayList<String>();
+		static ArrayList<String> entertainementBuffGifts = new ArrayList<String>();
 		entertainementBuffGifts.add("Dexter: The Complete Series Collection");
 		entertainementBuffGifts.add("150-200");
 		entertainementBuffGifts.add("http://goo.gl/ETWuPu");
@@ -607,7 +599,20 @@ public class GiftDatabase {
 		entertainementBuffGifts.add("10,000-50,000");
 		entertainementBuffGifts.add("http://goo.gl/5cru5q");
 
-	}
+	
+	
+	
+		/*create a hashmap called gift database that stores gifts recommended for each person
+		 * key = person name
+		 * value = list of gift ideas
+		 */
+		static Hashtable recommendedGifts = new Hashtable();
+
+		//public String[] recommendGifts(Person person){
+			//String[] recommendedGifts = person.suggestedGifts();
+			
+		//}
+	
 }
 
 	

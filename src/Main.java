@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Main {
 	// needs to write people & events 
 	public static void main(String args[])throws IOException{
-		
 		String eventName, eventDate, eventInfo, personName, giftPrice, eventLocation, reminderEmail, reminderDate;
 		String personName1, personLocation, personGender, personCareer, personPreferences;
 		Boolean[] personPreferences1;
