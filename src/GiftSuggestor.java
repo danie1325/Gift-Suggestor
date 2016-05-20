@@ -9,6 +9,7 @@ public class GiftSuggestor {
 		System.out.println("Would you like to add a new event (enter 0) or search for an existing event (enter 1)?");
 		String response = input.nextLine();
 		if (response.toLowerCase().equals("0")) {
+			
 			System.out.println("Enter Event Name:");
 			String eventName = input.nextLine();
 			

@@ -16,6 +16,10 @@ public class GiftDatabase {
 	 **2nd = price range
 	 *3rd = link to gift example
 	 *4th = beginning of next gift cycle
+	 	*first index = gift name
+	 	*2nd = price range
+	 	*3rd = link to gift example
+	 	*4th = beginning of next gift cycle
 	 */
 
 	public void createGiftDatabase() throws IOException{
