@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class GiftSuggestor {
+<<<<<<< HEAD
 	// needs to write people & events 
 	public static void main(String args[])throws IOException{
 		
@@ -36,4 +37,12 @@ public class GiftSuggestor {
 		}
 	   }
 	}
+=======
+	
+	//algorithm for suggesting gifts to people 
+	
+	
+
+}
+>>>>>>> branch 'master' of https://github.com/danie1325/Gift-Suggestor.git
 

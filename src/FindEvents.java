@@ -38,5 +38,11 @@ public class FindEvents {
 		String Str = new String(date);
 		return Str.substring(8, 10);
 	}
+	
+	//find an event from an event 
+	public Event findEvent(){
+		
+		return event;
+	}
 
 }
