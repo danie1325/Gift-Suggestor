@@ -6,6 +6,7 @@ public class Main {
 	public static void main(String args[])throws IOException{
 		String eventName, eventDate, eventInfo, personName, giftPrice, eventLocation, reminderEmail, reminderDate;
 		String personName1, personLocation, personGender, personCareer, personPreferences;
+		String possibleEventName, possibleEventDate, possibleEventPerson;
 		Boolean[] personPreferences1;
 		int personAge;
 		Scanner input = new Scanner(System.in);
@@ -88,6 +89,35 @@ public class Main {
 		}
 		
 		if (response.toLowerCase().equals("1")) {
+			
+			System.out.println("Do you know the name of the event (yes/no)?");
+			String knowEventName = input.nextLine();
+			if (knowEventName == "yes"){
+				System.out.println("Enter the event name: ");
+				possibleEventName = input.nextLine();
+			}
+			else{
+				possibleEventName = null;
+			}
+			
+			System.out.println("Do you know the date of the event (yes/no)?");
+			String knowEventDate = input.nextLine();
+			if (knowEventDate == "yes"){
+				System.out.println("Enter the event date (mm/dd/yy): ");
+				possibleEventDate = input.nextLine();
+			}
+			else{
+				possibleEventDate = null;
+			}
+			System.out.println("Do you know the person involved in the event (yes/no)?");
+			String knowEventPerson = input.nextLine();
+			if (knowEventPerson == "yes"){
+				System.out.println("Enter the name of the person: ");
+				possibleEventPerson = input.nextLine();
+			}
+			else{
+				possibleEventPerson = null;
+			}
 		
 			
 		}

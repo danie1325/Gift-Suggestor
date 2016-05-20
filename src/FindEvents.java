@@ -39,8 +39,10 @@ public class FindEvents {
 		return Str.substring(8, 10);
 	}
 	
-	//find an event from an event name input
-	//find an event from an input of the name of the person involved
-	//find an event from a date input
+	//find an event from an event 
+	public Event findEvent(){
+		
+		return event;
+	}
 
 }
