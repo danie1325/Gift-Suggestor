@@ -286,6 +286,7 @@ public class Person {
 	 * index 14: is artist
 	 * index 15: is an entertainement buff
 	 */
+	
 	//create a personalized gift list for each person, depending on what their preferences are
 	public static void makeGiftList(Boolean[] preferences){
 		String[] giftList = new String[9];
