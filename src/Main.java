@@ -118,6 +118,16 @@ public class Main {
 			else{
 				possibleEventPerson = null;
 			}
+			
+			Event possibleEvent = FindEvents.findEvent(possibleEventDate, possibleEventDate, possibleEventPerson);
+			if (possibleEvent == null){
+				System.out.println("Sorry, we could not find your event");
+				//maybe give the user more options?
+			}
+			else if (possibleEvent != null){
+				//display their event
+				Event.displayEvent(possibleEvent);
+			}
 		
 			
 		}
