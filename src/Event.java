@@ -39,4 +39,8 @@ public class Event {
 		
 	}
 	
+	public static void displayEvent(Event event){
+		s
+	}
+	
 }

@@ -40,7 +40,7 @@ public class FindEvents {
 	}
 	
 	//find an event from an event 
-	public Event findEvent(){
+	public static Event findEvent(String eventName, String eventDate, String eventPerson){
 		
 		return event;
 	}
