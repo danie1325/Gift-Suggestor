@@ -36,7 +36,7 @@ public class EventsCalendar {
 		char [] a = new char[50];
 		fr.read(a); // reads the content to the array
 		for(char c : a)
-			System.out.print(c); //prints the characters one by one
+		System.out.print(c); //prints the characters one by one
 		fr.close();
 	}
 

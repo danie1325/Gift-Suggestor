@@ -4,11 +4,12 @@ import java.util.Scanner;
 public class Main {
 	// needs to write people & events 
 	public static void main(String args[])throws IOException{
-		String eventName, eventDate, eventInfo, personName, giftPrice, eventLocation, reminderEmail, reminderDate;
+		String eventName, eventDate, eventInfo, personName, giftPrice = null, eventLocation, reminderEmail, reminderDate;
 		String personName1, personLocation, personGender, personCareer, personPreferences;
 		String possibleEventName, possibleEventDate, possibleEventPerson;
 		Boolean[] personPreferences1;
 		int personAge;
+		Boolean personExists = null;
 		Scanner input = new Scanner(System.in);
 		System.out.println("Would you like to add a new event (enter 0) or search for an existing event (enter 1)?");
 		String response = input.nextLine();
@@ -34,35 +35,56 @@ public class Main {
 			if (needGift == "yes"){
 				System.out.println("What is the name of the person who will be recieving the gift?");
 				personName1 = input.nextLine();
-				//CHECK HERE IF PERSON I SLAREADY IN DATABASE IF NOT --> CONTINUE
-				System.out.println("Where does the person live (City, State)? ");
-				personLocation = input.nextLine();
-				System.out.println("How much money are you willing to spend on " + personName1 + "'s gift?");
-				giftPrice = input.nextLine();
-				System.out.println("Enter the person's age: ");
-				personAge = input.nextInt();
-				System.out.println("Enter the person's gender (male/female): ");
-				personGender = input.nextLine();
-				System.out.println("Enter the person's career: ");
-				personCareer = input.nextLine();
-				personPreferences1 = Person.createPreferences(personAge, personGender);
-				Person.createPerson(personName1, personLocation, personAge, personGender, personCareer, personPreferences1);
+				//CHECK HERE IF PERSON I ALAREADY IN DATABASE IF NOT --> CONTINUE
+				if (PeopleDatabase.peopleDatabase.get(personName1) == null){
+					System.out.println("Where does the person live (City, State)? ");
+					personLocation = input.nextLine();
+					System.out.println("How much money are you willing to spend on " + personName1 + "'s gift?");
+					giftPrice = input.nextLine();
+					System.out.println("Enter the person's age: ");
+					personAge = input.nextInt();
+					System.out.println("Enter the person's gender (male/female): ");
+					personGender = input.nextLine();
+					System.out.println("Enter the person's career: ");
+					personCareer = input.nextLine();
+					personPreferences1 = Person.createPreferences(personAge, personGender);
+					Person.createPerson(personName1, personLocation, personAge, personGender, personCareer, personPreferences1);
+					personExists = false;
+					//PeopleDatabase.peoplesEvents.put(personName1,eventsForPerson); //events person needs to be array
+				}
+				else{
+					personExists = true;
+					//PeopleDatabase.peoplesEvents.put(personName1,eventsForPerson);  //since person exists need to add event to already existing arrayList
+				}
+
+				
 			}
 			else{
 				System.out.println("Enter the name of the person involved, or who the event is being thrown for:");
 				personName1 = input.nextLine();
-				System.out.println("Where does the person live (City, State)? ");
-				personLocation = input.nextLine();
-				System.out.println("How much money are you willing to spend on " + personName1 + "'s gift?");
-				giftPrice = input.nextLine();
-				System.out.println("Enter the person's age: ");
-				personAge = input.nextInt();
-				System.out.println("Enter the person's gender (male/female): ");
-				personGender = input.nextLine();
-				System.out.println("Enter the person's career: ");
-				personCareer = input.nextLine();
-				personPreferences1 = Person.createPreferences(personAge, personGender);
-				Person.createPerson(personName1, personLocation, personAge, personGender, personCareer, personPreferences1);
+				if (PeopleDatabase.peopleDatabase.get(personName1) == null){
+					System.out.println("Where does the person live (City, State)? ");
+					personLocation = input.nextLine();
+					System.out.println("How much money are you willing to spend on " + personName1 + "'s gift?");
+					giftPrice = input.nextLine();
+					System.out.println("Enter the person's age: ");
+					personAge = input.nextInt();
+					System.out.println("Enter the person's gender (male/female): ");
+					personGender = input.nextLine();
+					System.out.println("Enter the person's career: ");
+					personCareer = input.nextLine();
+					personPreferences1 = Person.createPreferences(personAge, personGender);
+					Person.createPerson(personName1, personLocation, personAge, personGender, personCareer, personPreferences1);
+					personExists = false;
+					//PeopleDatabase.peoplesEvents.put(personName1,eventsForPerson); //events person needs to be array
+				}
+				else{
+					personExists = true;
+					//PeopleDatabase.peoplesEvents.put(personName1,eventsForPerson); //since person exists need to add event to already existing arrayList
+				}
+				
+				
+				
 
 			}
 			

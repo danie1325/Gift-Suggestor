@@ -39,10 +39,17 @@ public class FindEvents {
 		return Str.substring(8, 10);
 	}
 	
-	//find an event from an event 
+	//find an event from info given by the person
 	public static Event findEvent(String eventName, String eventDate, String eventPerson){
-		
-		return event;
+		if(Event.events.get(eventName) != null){
+			return Event.events.get(eventName);
+		}
+		if(EventsCalendar.calendar.get(eventDate) != null){
+			return EventsCalendar.calendar.get(eventDate);
+		}
+		else{
+			return null;
+		}
 	}
 
 }

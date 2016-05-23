@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Hashtable;
 
 public class Event {
 	
@@ -25,6 +26,9 @@ public class Event {
 		
 	}
 	
+	
+	
+	
 	public static Event createEvent(String name, String date, String info, String person, String price, String location, String reminderEmail1, String reminderDate1) throws IOException{
 		
 		//create an instance of the event
@@ -33,6 +37,9 @@ public class Event {
 		//add the event to the respective hashmaps that need it
 		EventsCalendar.addEventToCalendar(date, event);
 		
+		//add the event to the events hashmap
+		addEventToHashmap(name, event);
+		
 		//return the event
 		return event;
 	
@@ -40,7 +47,15 @@ public class Event {
 	}
 	
 	public static void displayEvent(Event event){
-		s
+		System.out.println("test");
 	}
 	
+	
+	//store all events in a hashmap for easy searching
+	static Hashtable<String, Event> events = new Hashtable<String, Event>();
+	
+	public static void addEventToHashmap(String name, Event event){
+		events.put(name, event);
+		
+	}
 }
