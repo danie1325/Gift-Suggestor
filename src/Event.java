@@ -19,7 +19,8 @@ public class Event {
 		String priceRange = price;
 		
 		String reminderDate = reminderDate1;
-		String reminderEmail = reminderEmail1;		
+		String reminderEmail = reminderEmail1;	
+	}
 	
 	public static Event createEvent(String name, String date, String info, String person, String price, String location, String reminderEmail1, String reminderDate1) throws IOException{
 		
@@ -51,5 +52,4 @@ public class Event {
 		events.put(name, event);
 		
 	}
->>>>>>> branch 'master' of https://github.com/danie1325/Gift-Suggestor.git
 }
