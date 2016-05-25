@@ -1,4 +1,3 @@
-
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.Random;
@@ -248,6 +247,7 @@ public class Person {
 
 	}
 
+
 	/*make an object for every person and have that be stored in the hashmap
 	 * object stores gender, living location, age, preferences, etc
 	 */
@@ -261,11 +261,11 @@ public class Person {
 	}
 
 	//constructor for one person
-	public static Person createPerson(String name, String location, int age, String gender, String career, boolean[] personPreferences1) throws IOException{
+	public static Person createPerson(String name, String location, int age, String gender, String career, boolean[] preferences) throws IOException{
 		//needs to get ______
-		Person person = new Person(name, location, age, gender, career, personPreferences1);
+		Person person = new Person(name, location, age, gender, career, preferences);
 		PeopleDatabase.addPersonToDatabase(name, person);
-		makeGiftList(personPreferences1);
+		makeGiftList(preferences);
 		return person;
 	}
 	/*make an array of preferences
@@ -569,3 +569,5 @@ public class Person {
 
 
 }
+
+

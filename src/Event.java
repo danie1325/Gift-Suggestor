@@ -1,26 +1,32 @@
 import java.io.IOException;
+import java.util.Hashtable;
 
 public class Event {
 	
-	public static Event createEvent(String name, String info, String person, String price, String location){
-		Event event = new Event(name, info, person, price, location);
-		return event;
-		
-	}
-	
 	/*make an object for every event 
-	 * object stores event type, short description, and people involved
-	 * hashmap key = person name
+	 * object stores the following characteristics:
+	 	*event name
+	 	*event date
+	 	*event info
+	 	*person the gift is for or that the event is thrown for
+	 	*price of the gift
+	 	*location of the event
+	 	*reminderEmail to which reminder will be sent if person opts for a reminder
+	 	*reminderDate when which reminder will be sent if person opts for a reminder
 	 */
-	public Event(String eventName, String info, String person, String price, String location, String location2, String reminderEmail1, String reminderDate1) {
-		String personInvolved = person;  
+	public Event(String eventName, String eventDate, String info, String person, String price, String location, String reminderEmail1, String reminderDate1) {
+		String name = eventName;
+		String personInvolved = person; 
+		String date = eventDate;
 		String eventDescription = info;
 		String eventLocation = location;
 		String priceRange = price;
-		
 		String reminderDate = reminderDate1;
 		String reminderEmail = reminderEmail1;	
 	}
+	
+	
+	
 	
 	public static Event createEvent(String name, String date, String info, String person, String price, String location, String reminderEmail1, String reminderDate1) throws IOException{
 		
@@ -39,7 +45,11 @@ public class Event {
 		
 	}
 	
-	public static void displayEvent(Event event){
+	/*method that displays the event details
+	 	*shows the following: Event name, event description, person involved, event date, event location, gift price if not null	
+	 	*should also ask user if they want a gift suggestion
+	 */
+	public static void displayEvent(Event event){ 
 		System.out.println("test");
 		System.out.println("Would you like a gift suggestion for" + event.name + "?");
 	}
@@ -53,3 +63,5 @@ public class Event {
 		
 	}
 }
+
+

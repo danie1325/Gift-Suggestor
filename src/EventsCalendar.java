@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Hashtable;
 public class EventsCalendar {
-	//create a hashmap called people database
+	//create a hashmap that is called people database
 	static Hashtable<String, Event> calendar = new Hashtable<String, Event>();
 
 	public String getDate(){
@@ -12,14 +12,11 @@ public class EventsCalendar {
 	}
 
 	String date = getDate();
-	static String type;
-	static String info;
-	static String people = "";
-	static String price;
+
 
 	public static void addEventToCalendar(String date, Event event) throws IOException{
 		//call new event
-		calendar.put(date, event);
+		calendar.put(date, event); // change event name to an ArrayList of event type objects that will store all event sat that date
 		
 		//directory needs to be changed 
 		File file = new File("/Users/Amy/Documents/Events.txt");
@@ -39,11 +36,7 @@ public class EventsCalendar {
 		char [] a = new char[50];
 		fr.read(a); // reads the content to the array
 		for(char c : a)
-			System.out.print(c); //prints the characters one by one
+		System.out.print(c); //prints the characters one by one
 		fr.close();
 	}
-
-
-
-
 }

@@ -4,19 +4,13 @@ import java.util.Scanner;
 public class Main {
 	// needs to write people & events 
 	public static void main(String args[])throws IOException{
-
-		String eventName, eventDate, eventInfo, personName, giftPrice, eventLocation, reminderEmail, reminderDate = null;
-		
+		String eventName, eventDate, eventInfo, personName, giftPrice = null;
+		String eventLocation, reminderEmail, reminderDate;
 		String personName1, personLocation, personGender, personCareer, personPreferences;
-		
 		String possibleEventName, possibleEventDate, possibleEventPerson;
-		
-		boolean personExists;
-		
 		boolean[] personPreferences1;
-		
 		int personAge;
-		
+		boolean personExists;
 		Scanner input = new Scanner(System.in);
 		System.out.println("Would you like to add a new event (enter 0) or search for an existing event (enter 1)?");
 		String response = input.nextLine();
@@ -36,18 +30,11 @@ public class Main {
 			System.out.println("Enter an event descrition:");
 			eventInfo = input.nextLine();
 			
-			personName = "null";
-			giftPrice = "null";
+			
 			System.out.println("Will you need to buy a gift for this event?");
 			String needGift = input.nextLine();
 			if (needGift == "yes"){
 				System.out.println("What is the name of the person who will be recieving the gift?");
-				
-				personName = input.nextLine();
-				Person.addPerson(personName);
-				System.out.println("How much money are you willing to spend on " + personName + "'s gift?");
-				giftPrice = input.nextLine();
-
 				personName1 = input.nextLine();
 				//CHECK HERE IF PERSON I ALAREADY IN DATABASE IF NOT --> CONTINUE
 				if (PeopleDatabase.peopleDatabase.get(personName1) == null){
@@ -75,9 +62,6 @@ public class Main {
 			}
 			else{
 				System.out.println("Enter the name of the person involved, or who the event is being thrown for:");
-
-				personName = input.nextLine();
-
 				personName1 = input.nextLine();
 				if (PeopleDatabase.peopleDatabase.get(personName1) == null){
 					System.out.println("Where does the person live (City, State)? ");
@@ -100,11 +84,12 @@ public class Main {
 					//PeopleDatabase.peoplesEvents.put(personName1,eventsForPerson); //since person exists need to add event to already existing arrayList
 				}
 				
+				
+				
 
 			}
 			
-			String reminderDate = "null";
-			String reminderEmail = "null";
+	
 			System.out.println("Would you like an email reminder for this event?");
 			String wantReminder = input.nextLine();
 			if (wantReminder == "yes"){
@@ -114,13 +99,18 @@ public class Main {
 				reminderDate = input.nextLine(); //do we even need to get time or just the date?
 				//call a method in some sort of class to set a reminder 
 			}
+			else{
+				reminderEmail = "none";
+				reminderDate = "none"; 
+			}
 			
 			
 			
 			
-			Event event = Event.createEvent(eventName, eventDate, eventInfo, personName, giftPrice, eventLocation, reminderEmail, reminderDate);
+			Event event = Event.createEvent(eventName, eventDate, eventInfo, personName1, giftPrice, eventLocation, reminderEmail, reminderDate);
 			
 		}
+		
 		if (response.toLowerCase().equals("1")) {
 			
 			System.out.println("Do you know the name of the event (yes/no)?");
@@ -151,9 +141,18 @@ public class Main {
 			else{
 				possibleEventPerson = null;
 			}
+			
+			Event possibleEvent = FindEvents.findEvent(possibleEventDate, possibleEventDate, possibleEventPerson);
+			if (possibleEvent == null){
+				System.out.println("Sorry, we could not find your event");
+				//maybe give the user more options?
+			}
+			else if (possibleEvent != null){
+				//display their event
+				Event.displayEvent(possibleEvent);
+			}
 		
 			
 		}
 	   }
 	}
-
