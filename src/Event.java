@@ -45,9 +45,13 @@ public class Event {
 		
 	}
 	
-	public static void displayEvent(Event event){
+	/*method that displays the event details
+	 	*shows the following: Event name, event description, person involved, event date, event location, gift price if not null	
+	 	*should also ask user if they want a gift suggestion
+	 */
+	public static void displayEvent(Event event){ 
 		System.out.println("test");
-		System.out.println("Would you like a gift suggestion for" + event.name + "?");
+		//System.out.println("Would you like a gift suggestion for" + event.name + "?");
 	}
 	
 	

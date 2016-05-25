@@ -4,17 +4,21 @@ import java.util.Scanner;
 public class Main {
 	// needs to write people & events 
 	public static void main(String args[])throws IOException{
-		String eventName, eventDate, eventInfo, personName, giftPrice = null, eventLocation, reminderEmail, reminderDate;
+		String eventName, eventDate, eventInfo, personName, giftPrice = null;
+		String eventLocation, reminderEmail, reminderDate;
 		String personName1, personLocation, personGender, personCareer, personPreferences;
 		String possibleEventName, possibleEventDate, possibleEventPerson;
-		Boolean[] personPreferences1;
+		boolean[] personPreferences1;
 		int personAge;
-		Boolean personExists = null;
-		Scanner input = new Scanner(System.in);
-		System.out.println("Would you like to add a new event (enter 0) or search for an existing event (enter 1)?");
-		String response = input.nextLine();
+		boolean personExists;
+		Scanner input = new Scanner(System.in); 
+		//ask for persons file directory first
 		
-		//person is creating a new instance event --> event will be added to calendar hashmap
+		//ask the user if they would like to add a new event of search for an existing event
+		System.out.println("Would you like to add a new event (enter 0) or search for an existing event (enter 1)?");
+		String response = input.nextLine(); //0 = add event & 1 = search for an event
+		
+		//response = 0 --> person is creating a new instance of an event 
 		if (response.toLowerCase().equals("0")) {
 			
 			System.out.println("Enter Event Name:");
@@ -155,4 +159,5 @@ public class Main {
 		}
 	   }
 	}
+
 

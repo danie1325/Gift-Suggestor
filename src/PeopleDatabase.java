@@ -11,7 +11,7 @@ public class PeopleDatabase {
 	public static Hashtable<String, Person> peopleDatabase = new Hashtable<String, Person>();
 	
 	//create a hashmap called people;s events --> can be used to search for an event by the person related to it
-	public static Hashtable<String, ArrayList<Event>> peoplesEvents = new Hashtable<String, ArrayList<Event>>();
+	//public static Hashtable<String, ArrayList<Event>> peoplesEvents = new Hashtable<String, ArrayList<Event>>();
 
 	//constructor for one person
 	public static void addPersonToDatabase(String name, Person person) throws IOException{

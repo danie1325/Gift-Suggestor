@@ -1,0 +1,68 @@
+The following program is called a Gift Suggester and it was created by Daniella Maydan and Amy Luo of Kuszmaul's 4th period AP CS class.
+The program stores people's important events and can suggest gifts for the specific occasion.
+
+The program abides by the AP CS standards found at this link: http://apcentral.collegeboard.com/apc/public/repository/ap-computer-science-course-description.pdf . Our program is in accordance 
+with standards I.A, which is program design. It fulfills I.A.1, which we created this project so we must understand the problem, and purpose of the project. It also abides by I.A.2, which is
+using data abstraction and encapsulation. All of our classes showcase excellent encapsulation, meaning that they only contain the information that is necessary to their function, and all other
+code needed to run specific methods are stored in specific methods as to make things look neater. This program also fulfills standard I.B, which covers class design. Standard I.B.1 is the topic of designing 
+and implementing a class. Both of us (Amy and Daniella) sat down and outlined which classes we would need in order for this program to work, and what each class would do (which methods it would have). 
+This fulfills the design aspect of I.B.1, and since our classes are all implemented, our program fully fulfills I.B.1. Our program also fulfills I.B.2, which is to use appropriate algorithms and methods 
+of data representation. We spent a lot of deliberation deciding when it made sense to use an arrayList vs a hashmap vs a normal array to store our information. Our program fulfills standard I.B.2 because 
+we chose to use hashmaps for information that we knew had the potential to be incredibly large and that would need to be easily searched, because it's much faster to search a hashmap than it is to search an 
+arrayList. For example, we stored people in hashmaps so that people objects could be searched for by the person's string name. Contrastingly, we used arraylists to store information that did  not necessarily
+need to be searched by a key value. For example, we needed to store a lot of gifts so we stored them in arrayLists because we were going to choose gifts randomly, so there was no need to use a key to search for gifts, 
+and the lists weren't super long so efficiency was not our primary concern. Our program also fulfills the standards under section II, which covers program implementation. Our program fulfills II.A.1.a, because we used many 
+objects, which is the definition of object-oriented development. We also fulfilled II.1.c, which is encapsulation and information hiding, which we discussed above in relation to standard I.A.2. We also fulfilled standard II.A.1.b, 
+because we used top-down development in order to design our program; we considered the larger goal of the program first, and then gradually branched out into the smaller aspects of the program. Standard II.B.2, which covers declarations,
+is also fulfilled because our program properly declares variables and their types, as well as uses the proper syntax when creating classes and methods. We also properly use consule input, which means that we use System.out.print or System.out.println, 
+which successfully fulfills standard II.B.3. Since we used proper primitive types for our variables, in our program's case the types double, int, and boolean, as well as used objects, this program fulfills standard 
+II.B.1 as well. This program fulfills II.B.4, which covers the concept of control. II.B.4.a is methods, II.B.4.c is conditionals, and II.B.4.d is iteration. Our program has many methods and therefore fulfills a, has many conditionals,
+in the form of if-then statements, and therefore fulfills b, as well as has many iterations through the use of for and while loops, and therefore fulfills d. We also abided by II.C, which covers the use of java library programs since
+our program used the Math library, Random library, and many others. Standard III, program analysis was fulfilled by this program. When testing our code we isolated different classes and methods by commenting them out and seeing the effect,
+which fulfills standard III.A.1. In order to properly code our program we also had to remain wary of boundary issues. We used random numbers to choose values in arrayLists so we had to make sure that our indices were within the bounds
+of the arrayLists; this fulfills standard III.A.2. When debugging, we abided by standards II.B.1 and II.B.2 by identifying errors, categorizing them by the type of error they were (compile-time, run-time, logic), and then using that
+knowledge to correct the errors. In general, the completion of this program demonstrates our fulfillment of standards III.C, III.E, and III.F, since the success of this project makes it evident that we understand
+how the program works and that we understood how to correct the various errors we encountered along the way. Our program also fulfills the standard of understanding standard data structures, which is IV. We fulfilled IV.A (simple data types
+such as int, boolean, double), IV.B (classes), IV.C (lists), and IV.D (arrays) by properly using primitive data types, classes, and ArrayLists in this program.
+
+The GiftDatabase class stores numerous arrayLists of different types of gifts. For examples, different arrayLists store gifts for different
+age groups, different genders, and different personality traits (ex: artsy, athletic, etc). 
+
+The Event class contains an object of type Event that stores the name of the event, the date the event is occurring on, the location the event 
+is occurring at, a description of the event, the name of the person the event is being thrown for, the price range the program user is willing
+to spend on a gift for the person (if no gift is required, the value is null), and a reminder email and reminder date (null if person does not want to
+be reminded about the event). The class also contains a createEvent method, which creates an instance of an event, and calls two methods. The first method
+is called addEventToCalendar and is located in the EventsCalendar class. The EventsCalendar class only stores the addEventToCalendar method, which takes a 
+date and event instance input from the createEvent method and adds the event to a calendar hashmap. The calendar hashmap uses the event date as the 
+key and the event instance as the value. The second method that is called by the createEvent class is called addEventToHashmap and is located in the Event 
+class. The addEventToHashmap method takes an input of the name of the event (in string form) and the instance of the event itself and adds those two values
+to a hashmap called events. The hashmap is also stored in the Event class, and its key is the string form of the event name while the value is the instance of
+the event.
+
+The Person class contains an object of type Person that stores the person's name, the location at which they live, their age, gender, career, and preferences. 
+The preferences array uses the person's characteristics, as well as asks the user additional questions about the person in order to fill the arraylist with true/false
+values in response to different characteristics. For example, one index represents people of the age 36 and above. If the person is under the age of 36,
+that index in the preferences arrayList will be set to false. The Person class also contains a createPerson method that creates an instance of a person, as well as calls two methods. 
+The first method is called addPersonToDatabase and it is located in the PeopleDatabase class. The method takes the string name of the person and the instance of the person. In the 
+class PeopleDatabase, the addPersonToDatabase method makes the person's name the key of the peopleDatabase hashmap, and makes the instance of the person the value. The addPersonToDatabase
+method then saves the person's information to a file. The second method that the createPerson method calls is called makeGiftList, and it is located in the Person class. The method
+takes an input of the person's array of preferences and uses that information to create a list of three suggested gifts (taken from the gift database) for the person. 
+
+The GiftSuggester class takes the list of suggested gifts from the Person class and suggests one of them to the user. If the user dislikes the gift, the suggester will choose another one
+of the gifts, and if the user doesn't like any of the gift suggestions, a new list of gifts will be created. The GiftSuggester class will display each gift such that the user is presented
+with the name of the gift, its price range (which should fall under the user's chosen price range), and a link to an example of such a gift.
+
+The FindEvents class has a method that uses the name of an event or the date of an event to find the instance of the event. Once it finds the event, it calls the displayEvent method in
+the event class, which will display the event information to the person as well as ask the person if they need a gift suggestion. 
+
+The Main class contains the main method, which essentially guides the user through using the program. Firstly, it asks the user for its file directory so that the program can properly store
+its information on the user's computer. The user is then asked whether they would like to enter a new event into the system, or if they would like to search for an existing event. Depending on 
+the user's response, different questions are asked. If the user answers that they would like to input a new event, they are asked to input all of the components of an event object: the name of
+the event, the date the event is occurring on, the location the event is occurring at, a description of the event, the name of the person the event is being thrown for, the price range the 
+program user is willing to spend on a gift for the person (if no gift is required, the value is null), and a reminder email and reminder date (null if person does not want to be reminded about 
+the event). This information is then passed to the createEvent method in the Event class in oder to create a new event. Also, when asking for the person involved in the event, the program checks 
+if the person's name is already present in the PeopleDatabase. If the person does not already exist then an instance of the person will be created and added to the database, but if the name is 
+already present as a key in the database then a new person instance will NOT be created. If however, the user responds that they want to search for an existing event, the program will ask them
+to input the name of the event, the date of the event, and the name of the person involved in the event. If the user doesn't know the answer to any of those questions, they respond null. Using 
+that information, the program calls the findEvents class and attempts to find the event. If the event is found it is displayed and so on, but if it is not found then the user is alerted and asked
+if they would like to enter a new event. 

@@ -2,12 +2,62 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class GiftDatabase {
+	
 	/*store array lists of random gift ideas for different demographics in alternating thirds: 
 	 *first index = gift name
 	 *2nd = price range
 	 *3rd = link to gift example
 	 *4th = beginning of next gift cycle
 	 */
+	
+	//gifts for girls ages 0-4
+	static ArrayList<String> babyGirlGifts = new ArrayList<String>();
+
+	//gifts for boys ages 0-4
+	static ArrayList<String> babyBoyGifts = new ArrayList<String>();
+
+	//gifts for girls ages 5-8
+	static ArrayList<String> girlGifts = new ArrayList<String>();
+
+	//gifts for boys ages 5-8
+	static ArrayList<String> boyGifts = new ArrayList<String>();
+
+	//gifts for boys ages 9-12
+	static ArrayList<String> preteenBoyGifts = new ArrayList<String>();
+
+	//gifts for girls ages 9-12
+	static ArrayList<String> preteenGirlGifts = new ArrayList<String>();
+
+	//gifts for girls ages 13-19
+	static ArrayList<String> teenGirlGifts = new ArrayList<String>();
+
+	//gifts for boys ages 13-19
+	static ArrayList<String> teenBoyGifts = new ArrayList<String>();
+
+	//gifts for girls ages 20-35
+	static ArrayList<String> youngFemaleAdultGifts = new ArrayList<String>();
+
+	//gifts for boys ages 20-35
+	static ArrayList<String> youngMaleAdultGifts = new ArrayList<String>();
+
+	//gifts for girls ages 36+
+	static ArrayList<String> femaleAdultGifts = new ArrayList<String>();
+
+	//gifts for boys ages 36+
+	static ArrayList<String> maleAdultGifts = new ArrayList<String>();
+
+	//gifts for nerds!
+	static ArrayList<String> geekGifts = new ArrayList<String>();
+
+	//gifts for athletes
+	static ArrayList<String> athleteGifts = new ArrayList<String>();
+
+	//gifts for artists
+	static ArrayList<String> artistGifts = new ArrayList<String>();
+
+	//gifts for people that love movies, plays, museums, and music
+	static ArrayList<String> entertainementBuffGifts = new ArrayList<String>();
+
 	public GiftDatabase(){
 		babyGirlGifts.add("Onesie");
 		babyGirlGifts.add("10-30");
@@ -543,65 +593,7 @@ public class GiftDatabase {
 	}
 
 
-	//gifts for girls ages 0-4
-	static ArrayList<String> babyGirlGifts = new ArrayList<String>();
 
-	//gifts for boys ages 0-4
-	static ArrayList<String> babyBoyGifts = new ArrayList<String>();
-
-	//gifts for girls ages 5-8
-	static ArrayList<String> girlGifts = new ArrayList<String>();
-
-	//gifts for boys ages 5-8
-	static ArrayList<String> boyGifts = new ArrayList<String>();
-
-	//gifts for boys ages 9-12
-	static ArrayList<String> preteenBoyGifts = new ArrayList<String>();
-	
-	//gifts for girls ages 9-12
-	static ArrayList<String> preteenGirlGifts = new ArrayList<String>();
-	
-	//gifts for girls ages 13-19
-	static ArrayList<String> teenGirlGifts = new ArrayList<String>();
-	
-	//gifts for boys ages 13-19
-	static ArrayList<String> teenBoyGifts = new ArrayList<String>();
-	
-	//gifts for girls ages 20-35
-	static ArrayList<String> youngFemaleAdultGifts = new ArrayList<String>();
-	
-	//gifts for boys ages 20-35
-	static ArrayList<String> youngMaleAdultGifts = new ArrayList<String>();
-	
-	//gifts for girls ages 36+
-	static ArrayList<String> femaleAdultGifts = new ArrayList<String>();
-	
-	//gifts for boys ages 36+
-	static ArrayList<String> maleAdultGifts = new ArrayList<String>();
-	
-	//gifts for nerds!
-	static ArrayList<String> geekGifts = new ArrayList<String>();
-	
-	//gifts for athletes
-	static ArrayList<String> athleteGifts = new ArrayList<String>();
-	
-	//gifts for artists
-	static ArrayList<String> artistGifts = new ArrayList<String>();
-	
-	//gifts for people that love movies, plays, museums, and music
-	static ArrayList<String> entertainementBuffGifts = new ArrayList<String>();
-
-
-	/*create a hashmap called gift database that stores gifts recommended for each person
-	 * key = person name
-	 * value = list of gift ideas
-	 */
-	static Hashtable recommendedGifts = new Hashtable();
-
-	//public String[] recommendGifts(Person person){
-	//String[] recommendedGifts = person.suggestedGifts();
-
-	//}
 
 }
 
