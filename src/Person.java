@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-=======
+
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.Random;
->>>>>>> branch 'master' of https://github.com/danie1325/Gift-Suggestor.git
 
 public class Person {
 
