@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Hashtable;
 
@@ -25,11 +28,33 @@ public class Event {
 		String reminderEmail = reminderEmail1;	
 	}
 	
+	public static Event createEvent(String name, String date, String info, String person, String price, String location, String reminderEmail1, String reminderDate1, String directory) throws IOException{
+		//directory needs to be changed 
+		File file = new File(directory + "/Events.txt");
+		// creates the file
+		file.createNewFile();
+		// creates a FileWriter Object
+		FileWriter writer = new FileWriter(file); 
+
+		// Writes the content to the file
+		// how to convert from type object (event) to String
+		writer.write(date + ": "); 
+		writer.write(name + ": "); 
+		writer.write("Location: " + location + ", "); 
+		writer.write("People: " + person + ", "); 
+		writer.write("Info: " + info + ", "); 
+		writer.write("Price Range: " + price); 
+		writer.flush();
+		writer.close();
+
+		//Creates a FileReader Object
+		FileReader fr = new FileReader(file); 
+		char [] a = new char[100000];
+		fr.read(a); // reads the content to the array
+		for(char c : a)
+		System.out.print(c); //prints the characters one by one
+		fr.close();	
 	
-	
-	
-	public static Event createEvent(String name, String date, String info, String person, String price, String location, String reminderEmail1, String reminderDate1) throws IOException{
-		
 		//create an instance of the event
 		Event event = new Event(name, date, info, person, price, location, reminderEmail1, reminderDate1);
 		
@@ -50,7 +75,6 @@ public class Event {
 	 	*should also ask user if they want a gift suggestion
 	 */
 	public static void displayEvent(Event event){ 
-		System.out.println("test");
 		System.out.println("Would you like a gift suggestion for" + event.name + "?");
 	}
 	

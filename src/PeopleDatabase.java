@@ -14,11 +14,11 @@ public class PeopleDatabase {
 	public static Hashtable<String, ArrayList<Event>> peoplesEvents = new Hashtable<String, ArrayList<Event>>();
 
 	//constructor for one person
-	public static void addPersonToDatabase(String name, Person person) throws IOException{
+	public static void addPersonToDatabase(String name, Person person, String directory) throws IOException{
 		peopleDatabase.put(name, person); 
 		
 		//directory needs to be changed 
-		File file = new File("/Users/Daniella/Documents/People.txt"); //use "/Users/Amy/Documents/People.txt"
+		File file = new File(directory + "/People.txt");
 		// creates the file
 		file.createNewFile();
 		// creates a FileWriter Object
@@ -31,7 +31,7 @@ public class PeopleDatabase {
 
 		//Creates a FileReader Object
 		FileReader fr = new FileReader(file); 
-		char [] a = new char[50];
+		char [] a = new char[100000];
 		fr.read(a); // reads the content to the array
 		for(char c : a)
 			System.out.print(c); //prints the characters one by one

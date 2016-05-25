@@ -607,17 +607,5 @@ public class GiftDatabase {
 		entertainementBuffGifts.add("10,000-50,000");
 		entertainementBuffGifts.add("http://goo.gl/5cru5q");
 	}
-
-	/*create a hashmap called gift database that stores gifts recommended for each person
-	 * key = person name
-	 * value = list of gift ideas
-	 */
-	 Hashtable recommendedGifts = new Hashtable();
-
-	//public String[] recommendGifts(Person person){
-	//String[] recommendedGifts = person.suggestedGifts();
-
-	//}
-
 }
 

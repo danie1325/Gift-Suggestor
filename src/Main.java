@@ -1,17 +1,32 @@
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 	// needs to write people & events 
 	public static void main(String args[])throws IOException{
+		String directory;
+		
 		String eventName, eventDate, eventInfo, personName, giftPrice = null;
+
 		String eventLocation, reminderEmail, reminderDate;
+		
 		String personName1, personLocation, personGender, personCareer, personPreferences;
+		
 		String possibleEventName, possibleEventDate, possibleEventPerson;
+		
 		boolean[] personPreferences1;
+		
 		int personAge;
+		
 		boolean personExists;
+		
 		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter the directory to which you want the files to be saved: (For example:/Users/Joe/Documents)");
+		directory = input.nextLine();
+		
 		System.out.println("Would you like to add a new event (enter 0) or search for an existing event (enter 1)?");
 		String response = input.nextLine();
 		
@@ -107,7 +122,7 @@ public class Main {
 			
 			
 			
-			Event event = Event.createEvent(eventName, eventDate, eventInfo, personName1, giftPrice, eventLocation, reminderEmail, reminderDate);
+			Event event = Event.createEvent(eventName, eventDate, eventInfo, personName1, giftPrice, eventLocation, reminderEmail, reminderDate, directory);
 			
 		}
 		
@@ -154,5 +169,7 @@ public class Main {
 		
 			
 		}
+
 	   }
-	}
+}
+	
