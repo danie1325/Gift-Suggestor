@@ -22,8 +22,7 @@ public class Event {
 		String eventLocation = location;
 		String priceRange = price;
 		String reminderDate = reminderDate1;
-		String reminderEmail = reminderEmail1;
-		
+		String reminderEmail = reminderEmail1;	
 	}
 	
 	
@@ -48,6 +47,7 @@ public class Event {
 	
 	public static void displayEvent(Event event){
 		System.out.println("test");
+		System.out.println("Would you like a gift suggestion for" + event.name + "?");
 	}
 	
 	
