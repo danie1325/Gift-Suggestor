@@ -1,18 +1,25 @@
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 	// needs to write people & events 
 	public static void main(String args[])throws IOException{
+
 		String eventName, eventDate, eventInfo, personName, giftPrice = null;
 		String eventLocation, reminderEmail, reminderDate;
+		String directory;
 		String personName1, personLocation, personGender, personCareer, personPreferences;
 		String possibleEventName, possibleEventDate, possibleEventPerson;
 		boolean[] personPreferences1;
 		int personAge;
 		boolean personExists;
 		Scanner input = new Scanner(System.in); 
+		
 		//ask for persons file directory first
+		System.out.println("Enter the directory to which you want the files to be saved: (For example:/Users/Joe/Documents)");
+		directory = input.nextLine();
 		
 		//ask the user if they would like to add a new event of search for an existing event
 		System.out.println("Would you like to add a new event (enter 0) or search for an existing event (enter 1)?");
@@ -52,7 +59,7 @@ public class Main {
 					System.out.println("Enter the person's career: ");
 					personCareer = input.nextLine();
 					personPreferences1 = Person.createPreferences(personAge, personGender);
-					Person.createPerson(personName1, personLocation, personAge, personGender, personCareer, personPreferences1);
+					Person.createPerson(personName1, personLocation, personAge, personGender, personCareer, personPreferences1, directory);
 					personExists = false;
 					//PeopleDatabase.peoplesEvents.put(personName1,eventsForPerson); //events person needs to be array
 				}
@@ -78,7 +85,7 @@ public class Main {
 					System.out.println("Enter the person's career: ");
 					personCareer = input.nextLine();
 					personPreferences1 = Person.createPreferences(personAge, personGender);
-					Person.createPerson(personName1, personLocation, personAge, personGender, personCareer, personPreferences1);
+					Person.createPerson(personName1, personLocation, personAge, personGender, personCareer, personPreferences1, directory);
 					personExists = false;
 					//PeopleDatabase.peoplesEvents.put(personName1,eventsForPerson); //events person needs to be array
 				}
@@ -110,7 +117,7 @@ public class Main {
 			
 			
 			
-			Event event = Event.createEvent(eventName, eventDate, eventInfo, personName1, giftPrice, eventLocation, reminderEmail, reminderDate);
+			Event event = Event.createEvent(eventName, eventDate, eventInfo, personName1, giftPrice, eventLocation, reminderEmail, reminderDate, directory);
 			
 		}
 		
@@ -157,7 +164,9 @@ public class Main {
 		
 			
 		}
-	   }
-	}
 
+
+	   }
+}
+	
 

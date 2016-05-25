@@ -261,10 +261,10 @@ public class Person {
 	}
 
 	//constructor for one person
-	public static Person createPerson(String name, String location, int age, String gender, String career, boolean[] preferences) throws IOException{
+	public static Person createPerson(String name, String location, int age, String gender, String career, boolean[] preferences, String directory) throws IOException{
 		//needs to get ______
 		Person person = new Person(name, location, age, gender, career, preferences);
-		PeopleDatabase.addPersonToDatabase(name, person);
+		PeopleDatabase.addPersonToDatabase(name, person, directory);
 		makeGiftList(preferences);
 		return person;
 	}
@@ -570,7 +570,5 @@ public class Person {
 
 
 }
-
-
 
 

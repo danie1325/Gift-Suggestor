@@ -38,7 +38,7 @@ public class FindEvents {
 		String Str = new String(date);
 		return Str.substring(8, 10);
 	}
-	
+
 	//find an event using info given by the person
 	public static Event findEvent(String eventName, String eventDate, String eventPerson){
 		if(Event.events.get(eventName) != null){
@@ -51,5 +51,7 @@ public class FindEvents {
 			return null;
 		}
 	}
+
+	
 
 }
