@@ -100,10 +100,7 @@ public class Main {
 					//PeopleDatabase.peoplesEvents.put(personName1,eventsForPerson); //since person exists need to add event to already existing arrayList
 				}
 				
-				
-				
 
->>>>>>> branch 'master' of https://github.com/danie1325/Gift-Suggestor.git
 			}
 			
 			String reminderDate = "null";
