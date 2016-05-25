@@ -2,7 +2,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Hashtable;
+import java.util.List;
+import java.util.Scanner;
 
 public class Event {
 	
@@ -26,7 +29,10 @@ public class Event {
 		String priceRange = price;
 		String reminderDate = reminderDate1;
 		String reminderEmail = reminderEmail1;	
-	}
+		
+		final List<String> eventBasics = Arrays.asList(name, personInvolved, date, eventDescription, eventLocation, priceRange);
+	
+		}
 	
 	public static Event createEvent(String name, String date, String info, String person, String price, String location, String reminderEmail1, String reminderDate1, String directory) throws IOException{
 		//directory needs to be changed 
@@ -74,10 +80,17 @@ public class Event {
 	 	*shows the following: Event name, event description, person involved, event date, event location, gift price if not null	
 	 	*should also ask user if they want a gift suggestion
 	 */
-	public static void displayEvent(Event event){ 
-		System.out.println("test");
-		//System.out.println("Would you like a gift suggestion for" + event.name + "?");
-		//System.out.println("Would you like a gift suggestion for" + event.name + "?");
+	public static void displayEvent(Event event, List<String> eventBasics){ 
+		System.out.println(event.getClass());
+		for (String s : eventBasics) {
+			System.out.println(s);
+		}
+		Scanner input = new Scanner(System.in);
+		System.out.println("Would you like a gift suggestion for this event?");
+		String response = input.nextLine();
+		if (response.toLowerCase() == "yes") {
+			GiftSuggestor.suggestGift();
+		}
 	}
 	
 	

@@ -159,7 +159,7 @@ public class Main {
 			}
 			else if (possibleEvent != null){
 				//display their event
-				Event.displayEvent(possibleEvent);
+				//Event.displayEvent(possibleEvent, Event.eventBasics);
 			}
 		
 			
