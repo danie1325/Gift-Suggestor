@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Person {
 
-	public static Boolean[] createPreferences(int age, String gender){
+	public static boolean[] createPreferences(int age, String gender){
 		Scanner input = new Scanner(System.in);
 		/*make an array of preferences
 		 * index 0: is girl aged 0-4
@@ -25,9 +25,9 @@ public class Person {
 		 * index 14: is artist
 		 * index 15: is an entertainement buff
 		 */
-		Boolean[] preferences = new Boolean[16]; 
-		Boolean female;
-		Boolean male;
+		boolean[] preferences = new boolean[16]; 
+		boolean female;
+		boolean male;
 
 		System.out.println("Is the person a nerd (yes/no)?");
 		String nerd = input.nextLine();
@@ -251,7 +251,7 @@ public class Person {
 	/*make an object for every person and have that be stored in the hashmap
 	 * object stores gender, living location, age, preferences, etc
 	 */
-	public Person(String name, String location, int age, String gender, String career, Boolean[] preferences) {
+	public Person(String name, String location, int age, String gender, String career, boolean[] preferences) {
 		String personName = name;
 
 	}
@@ -261,11 +261,11 @@ public class Person {
 	}
 
 	//constructor for one person
-	public static Person createPerson(String name, String location, int age, String gender, String career, Boolean[] preferences) throws IOException{
+	public static Person createPerson(String name, String location, int age, String gender, String career, boolean[] personPreferences1) throws IOException{
 		//needs to get ______
-		Person person = new Person(name, location, age, gender, career, preferences);
+		Person person = new Person(name, location, age, gender, career, personPreferences1);
 		PeopleDatabase.addPersonToDatabase(name, person);
-		makeGiftList(preferences);
+		makeGiftList(personPreferences1);
 		return person;
 	}
 	/*make an array of preferences
@@ -288,7 +288,7 @@ public class Person {
 	 */
 	
 	//create a personalized gift list for each person, depending on what their preferences are
-	public static void makeGiftList(Boolean[] preferences){
+	public static void makeGiftList(boolean[] preferences){
 		String[] giftList = new String[9];
 		int random;
 		int randOrganize;
